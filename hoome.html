@@ -1,0 +1,186 @@
+1<!DOCTYPE html>
+<html>
+<head>
+           <title>Flower Shop | Home</title>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+                :root {
+            --pink: #e84393;
+            --light-pink: #ffdee9;
+            --white: #fff;
+            --dark: #333;
+        }
+
+                {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            text-decoration: none;
+            list-style: none;
+            transition: 0.3s;
+        }
+
+        
+        body {
+            background: url("C:\Users\lenovo\Documents\2e546493-10f0-4a49-b9ac-0f1624c801c2.jpg") no-repeat center center/cover;
+            height: 100vh;
+            color: var(--dark);
+        }
+
+                header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 10%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--pink);
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            font-size: 1.2rem;
+            color: var(--dark);
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background: var(--pink);
+            color: var(--white);
+        }
+
+                .home {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(255, 182, 193, 0.2);
+        }
+
+        .home-content {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-content h1 {
+            font-size: 3.5rem;
+            color: var(--pink);
+        }
+
+        .home-content p {
+            font-size: 1.6rem;
+            margin: 10px 0 20px;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 1.6rem;
+            background: var(--pink);
+            color: var(--white);
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #d63384;
+        }
+
+                @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: var(--white);
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                width: 200px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 10px;
+            }
+
+            .menu-toggle {
+                display: block;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+
+            .menu-toggle.active + ul {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header>
+        <div class="logo">Flower<span style="color: var(--dark);">Shop</span></div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul>
+                <li><a href="hoome.html">Home</a></li>
+                <li><a href="login,register.html">Login</a></li>
+                <li><a href="login,register.html">Register</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="contact us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Fresh Flowers</h1>
+            <p>Step into a world of beauty and elegance with our handpicked, fresh, and vibrant flowers. Whether you're celebrating love, friendship, or new beginnings, our blossoms bring warmth and joy to every occasion. From romantic roses to cheerful lilies, we craft floral arrangements that leave lasting impressions. Let nature’s finest creations brighten your day—because every petal whispers love, and every bouquet spreads happiness! 🌸✨.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- JavaScript for Menu Toggle -->
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector("nav ul");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

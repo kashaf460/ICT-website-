@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html >
+<head>
+            <title>Login & Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffc0cb; /* Light Pink */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 350px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff69b4; /* Darker Pink */
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff1493; /* Deep Pink */
+        }
+
+        .toggle-link {
+            margin-top: 10px;
+            display: block;
+            color: #ff69b4;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header>
+
+ <nav>
+        <a href="hoome.html">Home</a>
+        <a href="login,register.html">Login</a>
+        <a href="login,register.html">Register</a>
+        <a href="about us.html">About Us</a>
+<a href="Products.html">Products</a>
+<a href="contact us.html">Contact Us</a>
+
+    </nav>
+</header>
+
+    <div class="container" id="login-form">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button>Login</button>
+        <span class="toggle-link" onclick="showRegister()">Don't have an account? Register</span>
+    </div>
+
+    <div class="container" id="register-form" style="display: none;">
+        <h2>Register</h2>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button>Register</button>
+        <span class="toggle-link" onclick="showLogin()">Already have an account? Login</span>
+    </div>
+
+    <script>
+        function showRegister() {
+            document.getElementById("login-form").style.display = "none";
+            document.getElementById("register-form").style.display = "block";
+        }
+
+        function showLogin() {
+            document.getElementById("login-form").style.display = "block";
+            document.getElementById("register-form").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
